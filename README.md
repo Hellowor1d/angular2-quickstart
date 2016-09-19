@@ -26,3 +26,11 @@ a repository for my study record
 * (click) 绑定click事件
 
 * app.component.ts中 @Component 中设置 **styles** 只对组件内元素起效
+
+### 多个组件 (实现一个可复用的组件)
+
+* 使用 `@Component` 装饰器创建元数据,在元数据中，我们指定选择器的名字，用以标记此组件的元素。 然后，我们导出这个组件类，以便其它组件可以使用它。
+* 命名约定: 中线命名法(也叫 烤串命名法 ),所有组件名都以 Component 结尾,所有组件的文件名都以 .component 结尾
+* @Input() hero: Hero 写在 export class HeroDetailComponent{ }中
+* 新添加的组件 HeroDetailComponent 要写进 app.module.ts 中,添加 HeroDetailComponent 到 NgModule 装饰器中的 declarations 数组。这个数组包含了所有属于本应用模块的，由我们亲自创建的组件、管道和指令。
+>  单独创建了一个 hero.ts 文件,用以传递选中的 Hero (why?思考)
