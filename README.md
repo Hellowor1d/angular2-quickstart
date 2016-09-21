@@ -40,3 +40,4 @@ a repository for my study record
 * 在 app 目录下创建一个名叫 hero.service.ts 的文件
 * *@Injectable()* 装饰器使用这个函数。
 不要忘了写**圆括号**！ 如果忘了写，就会导致一个很难诊断的错误
+* 添加一个名叫 ·getHeros· 的桩方法。  改为 getHeroes
