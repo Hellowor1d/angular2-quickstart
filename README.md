@@ -39,9 +39,15 @@ a repository for my study record
 * 我们可改进的地方至少有两个：首先，定义英雄的数据不该是该组件的任务。其次，想把这份英雄列表的数据共享给其它组件和视图可不那么容易。
 * 在 app 目录下创建一个名叫 hero.service.ts 的文件
 * *@Injectable()* 装饰器使用这个函数。
+* *@Injectable()* 标识一个类可以被注入器实例化。
+不要忘了写**圆括号**！ 如果忘了建议为每个服务类都添加@Injectable()，包括那些没有依赖严格来说并不需要它的。因为：
+面向未来: 没有必要记得在后来添加依赖的时候添加 @Injectable()。
+一致性:所有的服务都遵循同样的规则，不需要考虑为什么某个地方少了一个。写，就会导致一个很难诊断的错误
 不要忘了写**圆括号**！ 如果忘了写，就会导致一个很难诊断的错误
 * 添加一个名叫 ·getHeros· 的桩方法。  改为 getHeroes  (修改文档错误,提PR)
 * 继续学习服务内容
+* 想要在列表组件appComponent中调用HeroService提供的数据，需要在当前文件中`import {HeroService} form './hero.service'`
+* 使用 constructor(private heroservice: HeroService){ }
 ---
 ### 十一放假
 ---
