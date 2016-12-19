@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 import 'rxjs/add/operator/switchMap';
@@ -17,7 +17,6 @@ import { HeroService } from './hero.service';
 
 
 export class HeroDetailComponent implements OnInit {
-  @Input()
   hero: Hero;
 
   constructor(
@@ -34,6 +33,11 @@ export class HeroDetailComponent implements OnInit {
   //调用浏览器回退
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void{
+    this.heroService.update(this.hero)
+                    .then(()=> this.goBack());
   }
 
 }
