@@ -12,10 +12,16 @@ export class HeroService{
   private heroesUrl = 'app/heroes';
   constructor( private http: Http) {}
 
+  private handleError(error: any): Promise<any> {
+  console.error('An error occurred', error); // for demo purposes only
+  return Promise.reject(error.message || error);
+}
+
+
   getHeroes(): Promise<Hero[]> {
   return this.http.get(this.heroesUrl)
              .toPromise()   //来自于 'rxjs/add/operator/toPromise';
-             .then(response => response.json().data as Hero[])
+             .then(response => response.json().data as Hero[]) //在 promise 的then回调中，我们调用 HTTP 的Reponse对象的json方法，以提取出其中的数据
              .catch(this.handleError)
 }
 

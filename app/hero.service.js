@@ -16,10 +16,14 @@ var HeroService = (function () {
         this.http = http;
         this.heroesUrl = 'app/heroes';
     }
+    HeroService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        return Promise.reject(error.message || error);
+    };
     HeroService.prototype.getHeroes = function () {
         return this.http.get(this.heroesUrl)
             .toPromise() //来自于 'rxjs/add/operator/toPromise';
-            .then(function (response) { return response.json().data; })
+            .then(function (response) { return response.json().data; }) //在 promise 的then回调中，我们调用 HTTP 的Reponse对象的json方法，以提取出其中的数据
             .catch(this.handleError);
     };
     HeroService.prototype.getHeroesSlowly = function () {

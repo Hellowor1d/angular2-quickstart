@@ -33,7 +33,7 @@ a repository for my study record
 * 命名约定: 中线命名法(也叫 烤串命名法 ),所有组件名都以 Component 结尾,所有组件的文件名都以 .component 结尾. 比如， SpecialSuperHeroService 服务应该被定义在 special-super-hero.service.ts 文件中。
 * @Input() hero: Hero 写在 export class HeroDetailComponent{ }中
 * 新添加的组件 HeroDetailComponent 要写进 app.module.ts 中,添加 HeroDetailComponent 到 NgModule 装饰器中的 declarations 数组。这个数组包含了所有属于本应用模块的，由我们亲自创建的组件、管道和指令。
->  单独创建了一个 hero.ts 文件,用以传递选中的 Hero (why?思考)
+>  单独创建了一个 hero.ts 文件,用以传递选中的 Hero (why?思考)answer: 这是规定了一个Hero 类，规范数据类型
 
 ### 服务
 * 我们可改进的地方至少有两个：首先，定义英雄的数据不该是该组件的任务。其次，想把这份英雄列表的数据共享给其它组件和视图可不那么容易。
@@ -48,6 +48,8 @@ a repository for my study record
 * 继续学习服务内容
 * 想要在列表组件appComponent中调用HeroService提供的数据，需要在当前文件中`import {HeroService} form './hero.service'`
 * 使用 constructor(private heroservice: HeroService){ }
+
+https://angular.cn/docs/ts/latest/tutorial/toh-pt6.html  这正是将数据访问委托组*(给)*一个服务的目的
 ---
 ### 十一放假
 ---
