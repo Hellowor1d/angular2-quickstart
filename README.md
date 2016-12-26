@@ -49,6 +49,15 @@ a repository for my study record
 * 想要在列表组件appComponent中调用HeroService提供的数据，需要在当前文件中`import {HeroService} form './hero.service'`
 * 使用 constructor(private heroservice: HeroService){ }
 
+>
+不要把NgModel（或FORMS_DIRECTIVES）加到AppModule元数据的declarations`数据中！
+
+这些指令属于FormsModule。 组件、指令和管道只能属于一个模块。
+
+永远不要再次声明属于其它模块的类。
+
+小吐槽，模块化的各种自有新概念有点多
+
 https://angular.cn/docs/ts/latest/tutorial/toh-pt6.html  这正是将数据访问委托组*(给)*一个服务的目的
 ---
 ### 十一放假
