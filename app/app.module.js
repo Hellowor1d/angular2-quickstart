@@ -12,7 +12,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
-// Imports for loading & configuring the in-memory web api
+// Imports for loading & configuring the in-memory web api 为了模拟http请求获取英雄数据列表
 var angular2_in_memory_web_api_1 = require("angular2-in-memory-web-api");
 var in_memory_data_service_1 = require("./in-memory-data.service");
 var app_component_1 = require("./app.component");

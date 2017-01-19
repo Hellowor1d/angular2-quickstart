@@ -3,7 +3,7 @@ import { BrowserModule }        from '@angular/platform-browser';
 import { FormsModule }          from '@angular/forms';
 import { HttpModule }           from '@angular/http'
 
-// Imports for loading & configuring the in-memory web api
+// Imports for loading & configuring the in-memory web api 为了模拟http请求获取英雄数据列表
 import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
@@ -27,7 +27,7 @@ import { AppRoutingModule }     from './app-routing.module';
   declarations: [
      AppComponent,
      DashboardComponent,
-    HeroDetailComponent,
+     HeroDetailComponent,
      HeroesComponent
    ],
    providers: [
