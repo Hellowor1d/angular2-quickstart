@@ -59,6 +59,8 @@ a repository for my study record
 小吐槽，模块化的各种自有新概念有点多
 
 https://angular.cn/docs/ts/latest/tutorial/toh-pt6.html  这正是将数据访问委托组*(给)*一个服务的目的
+
+AppModule中的 imports 与Conta*c*tModule的 imports 互不相干
 ---
 ### 十一放假
 ---

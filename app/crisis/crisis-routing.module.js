@@ -10,26 +10,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var dashboard_component_1 = require("./dashboard.component");
-var hero_detail_component_1 = require("./hero-detail.component");
+var crisis_list_component_1 = require("./crisis-list.component");
+var crisis_detail_component_1 = require("./crisis-detail.component");
 var routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
-    { path: 'detail/:id', component: hero_detail_component_1.HeroDetailComponent },
-    { path: 'crisis', loadChildren: 'app/crisis/crisis.module#CrisisModule' },
-    { path: 'heroes', loadChildren: 'app/hero/hero.module.3#HeroModule' }
+    { path: '', redirectTo: 'list', pathMatch: 'full' },
+    { path: 'list', component: crisis_list_component_1.CrisisListComponent },
+    { path: ':id', component: crisis_detail_component_1.CrisisDetailComponent }
 ];
-var AppRoutingModule = (function () {
-    function AppRoutingModule() {
+var CrisisRoutingModule = (function () {
+    function CrisisRoutingModule() {
     }
-    return AppRoutingModule;
+    return CrisisRoutingModule;
 }());
-AppRoutingModule = __decorate([
+CrisisRoutingModule = __decorate([
     core_1.NgModule({
-        imports: [router_1.RouterModule.forRoot(routes)],
+        imports: [router_1.RouterModule.forChild(routes)],
         exports: [router_1.RouterModule]
     }),
     __metadata("design:paramtypes", [])
-], AppRoutingModule);
-exports.AppRoutingModule = AppRoutingModule;
-//# sourceMappingURL=app-routing.module.js.map
+], CrisisRoutingModule);
+exports.CrisisRoutingModule = CrisisRoutingModule;
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/ 
+//# sourceMappingURL=crisis-routing.module.js.map

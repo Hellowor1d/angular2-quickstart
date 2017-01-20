@@ -20,7 +20,7 @@ AppComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'my-app',
-        template: "\n  <app-title [subtitle]=\"subtitle\"></app-title>\n  <app-contact></app-contact>\n\n  <h1>{{title}}</h1>\n  <nav>\n    <a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n    <a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n  </nav>\n  <router-outlet></router-outlet>\n",
+        template: "\n  <app-title [subtitle]=\"subtitle\"></app-title>\n  <nav>\n    <a routerLink=\"contact\" routerLinkActive=\"active\">Contact</a>\n    <a routerLink=\"crisis\"  routerLinkActive=\"active\">Crisis Center</a>\n    <a routerLink=\"heroes\"  routerLinkActive=\"active\">Heroes</a>\n  </nav>\n <!--<router-outlet></router-outlet>-->\n\n  <h1>{{title}}</h1>\n  <nav>\n    <a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n    <a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n  </nav>\n  <router-outlet></router-outlet>\n",
         styleUrls: ['app.component.css'],
     }),
     __metadata("design:paramtypes", [])

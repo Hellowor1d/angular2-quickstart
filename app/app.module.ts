@@ -18,11 +18,9 @@ import { TitleComponent }       from './title.component';
 import { HighlightDirective }   from './highlight.directive';
 import { UserService }          from './user.service' ; 
 
-import { AwesomePipe }          from './contact/awesome.pipe';
-import { ContactComponent }     from './contact/contact.component';
-import { HighlightDirective as ContactHighlightDirective}     from './contact/highlight.directive';
-import { ContactService }       from './contact/contact.service';
-
+import { ContactModule }      from './contact/contact.module';
+import { CrisisModule }       from './crisis/crisis.module';
+import { HeroModule }         from './hero/hero.module.3'
 
 import { AppRoutingModule }     from './app-routing.module';
 
@@ -32,6 +30,9 @@ import { AppRoutingModule }     from './app-routing.module';
      FormsModule,
      AppRoutingModule,
      HttpModule,
+     ContactModule,
+     CrisisModule,
+     HeroModule,
      InMemoryWebApiModule.forRoot(InMemoryDataService),
 
    ],
@@ -42,14 +43,10 @@ import { AppRoutingModule }     from './app-routing.module';
      HeroesComponent,
      HighlightDirective,
      TitleComponent,
-     AwesomePipe,
-     ContactComponent,
-     ContactHighlightDirective
 
    ],
    providers: [
     HeroService,
-    ContactService,
     UserService
   ],
   bootstrap:  [

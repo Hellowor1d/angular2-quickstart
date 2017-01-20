@@ -10,26 +10,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var dashboard_component_1 = require("./dashboard.component");
+var hero_component_3_1 = require("./hero.component.3");
+var hero_list_component_1 = require("./hero-list.component");
 var hero_detail_component_1 = require("./hero-detail.component");
 var routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
-    { path: 'detail/:id', component: hero_detail_component_1.HeroDetailComponent },
-    { path: 'crisis', loadChildren: 'app/crisis/crisis.module#CrisisModule' },
-    { path: 'heroes', loadChildren: 'app/hero/hero.module.3#HeroModule' }
-];
-var AppRoutingModule = (function () {
-    function AppRoutingModule() {
+    { path: '',
+        component: hero_component_3_1.HeroComponent,
+        children: [
+            { path: '', component: hero_list_component_1.HeroListComponent },
+            { path: ':id', component: hero_detail_component_1.HeroDetailComponent }
+        ]
     }
-    return AppRoutingModule;
+];
+var HeroRoutingModule = (function () {
+    function HeroRoutingModule() {
+    }
+    return HeroRoutingModule;
 }());
-AppRoutingModule = __decorate([
+HeroRoutingModule = __decorate([
     core_1.NgModule({
-        imports: [router_1.RouterModule.forRoot(routes)],
+        imports: [router_1.RouterModule.forChild(routes)],
         exports: [router_1.RouterModule]
     }),
     __metadata("design:paramtypes", [])
-], AppRoutingModule);
-exports.AppRoutingModule = AppRoutingModule;
-//# sourceMappingURL=app-routing.module.js.map
+], HeroRoutingModule);
+exports.HeroRoutingModule = HeroRoutingModule;
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/ 
+//# sourceMappingURL=hero-routing.module.3.js.map
