@@ -9,21 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Angular Tour of Heroes';
-        this.subtitle = '(v1)';
+var user_service_1 = require("./user.service");
+var TitleComponent = (function () {
+    function TitleComponent(userService) {
+        this.subtitle = '';
+        this.title = 'Angualr Modules';
+        this.user = '';
+        this.user = userService.userName;
     }
-    return AppComponent;
+    return TitleComponent;
 }());
-AppComponent = __decorate([
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], TitleComponent.prototype, "subtitle", void 0);
+TitleComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'my-app',
-        template: "\n  <app-title [subtitle]=\"subtitle\"></app-title>\n  <nav>\n    <a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n    <a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n  </nav>\n  <router-outlet></router-outlet>\n",
-        styleUrls: ['app.component.css'],
+        selector: 'app-title',
+        templateUrl: 'title.component.html'
     }),
-    __metadata("design:paramtypes", [])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+    __metadata("design:paramtypes", [user_service_1.UserService])
+], TitleComponent);
+exports.TitleComponent = TitleComponent;
+//# sourceMappingURL=title.component.js.map

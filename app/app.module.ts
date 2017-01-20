@@ -13,6 +13,11 @@ import { HeroDetailComponent }  from './hero-detail.component';
 import { DashboardComponent }   from './dashboard.component';
 import { HeroService }          from './hero.service';
 
+
+import { TitleComponent }       from './title.component'
+import { HighlightDirective }   from './highlight.directive'
+import { UserService }          from './user.service'   
+
 import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
@@ -28,10 +33,13 @@ import { AppRoutingModule }     from './app-routing.module';
      AppComponent,
      DashboardComponent,
      HeroDetailComponent,
-     HeroesComponent
+     HeroesComponent,
+     HighlightDirective,
+     TitleComponent
    ],
    providers: [
-    HeroService
+    HeroService,
+    UserService
   ],
   bootstrap:  [
      AppComponent
