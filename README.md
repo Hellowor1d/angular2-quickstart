@@ -68,3 +68,4 @@ AppModule中的 imports 与Conta*c*tModule的 imports 互不相干
 继续用官网教程练习模块部分
 >正在看烹饪宝典中的FAQ部分
 继续学习angular2
+>1.21
